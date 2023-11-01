@@ -1,0 +1,186 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    color: #fff;
+}
+.wrapper {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+}
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.audio {
+    padding: 25px 25px 40px;
+    border-radius: 10px;
+    box-shadow: 0px 6px 6px 5px rgba(0,0,0,0.5);
+}
+.audio-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+.audio-bg {
+    width: 220px;
+    height: 220px;
+    box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.5);
+    border-radius: 50%;
+    margin: 10px;
+    background-size: cover;
+    background-position: center;
+}
+.audio-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    margin-top: 10px;
+}
+.audio-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+.audio-buttons div {
+    padding: 14px 20px;
+    font-size: 16px;
+}
+.audio-buttons div.audio-play-pause {
+    font-size: 30px;
+}
+.seek-audio,
+.volume-audio {
+    appearance: none;
+    height: 5px;
+    background: #a0c5f8;
+    transition: opasity .2s;
+    margin: 0 6px;
+    border-radius: 6px;
+}
+.seek-audio::-webkit-slider-thumb,
+.volume-audio::-webkit-slider-thumb {
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #fff;
+    border: 3px solid #a0c5f8;
+    cursor: pointer;
+}
+.seek-audio {
+    width: 70%;
+}
+.volume-audio {
+    width: 30%;
+}
+i {
+    color: #fff;
+    opacity: 0.5;
+    transition: opacity .3s ease;
+}
+i:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+.randomActive,
+.not-volume,
+.up-volume {
+    opacity: 1;
+}
+.rotate {
+    animation: rotation 8s infinite linear;
+}
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
+.loader {
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loader .stroke {
+    background: #f1f1f1;
+    height: 150%;
+    width: 10px;
+    border-radius: 50px;
+    margin: 0 6px;
+    animation: animate 1.5s infinite linear;
+}
+@keyframes animate {
+    50% {
+        height: 20%;
+        background: #a0c5f8;
+    }
+    100% {
+        height: 100%;
+    }
+}
+.stroke:nth-child(1) {
+    animation-delay: 0s;
+}
+.stroke:nth-child(2) {
+    animation-delay: 0.3s;
+}
+.stroke:nth-child(3) {
+    animation-delay: 0.6s;
+}
+.stroke:nth-child(4) {
+    animation-delay: 0.9s;
+}
+.stroke:nth-child(5) {
+    animation-delay: 0.6s;
+}
+.stroke:nth-child(6) {
+    animation-delay: 0.3s;
+}
+.stroke:nth-child(7) {
+    animation-delay: 0s;
+}
+footer {
+    height: 70px;
+    max-width: 1000px;
+    width: 100%;
+    padding: 0 30px;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 0px);
+}
+.footer-container {
+    width: 100%;
+    height: 70px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.rs a img {
+    width: 50px;
+}
+.githab a {
+    text-decoration: none;
+    color: #fff;
+}
+h1 {
+    font-size: 34px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 26px;
+}

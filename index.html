@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://use.fontawesome.com/fcf4bfad86.js"></script>
+    <title>Audio player</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>Audio Player</h1>
+        </header>
+        <div class="container">
+            <div class="audio">
+                <div class="audio-details">
+                    <div class="audio-play"></div>
+                    <div class="audio-bg"></div>
+                    <div class="audio-name"></div>
+                    <div class="audio-singer"></div>
+                </div>
+
+                <div class="audio-container">
+                    <div class="current-time">00:00</div>
+                    <input type="range" min="1" max="100" value="0" class="seek-audio" onchange="seekTo()">
+                    <div class="total-duration">00:00</div>
+                </div>
+                
+                <div class="audio-container">
+                    <div class="volume-down" onclick="volumeOffAudio()">
+                        <i class="fa fa-volume-off" aria-hidden="true"></i>
+                    </div>
+                    <input type="range" min="1" max="100" value="99" class="volume-audio" onchange="setVolume()">
+                    <div class="volume-up" onclick="volumeUpAudio()">
+                        <i class="fa fa-volume-up" aria-hidden="true"></i>
+                    </div>
+                </div>
+
+                <div class="audio-buttons">
+                    <div class="audio-random" onclick="randomAudio()">
+                        <i class="fa fa-random" aria-hidden="true" title="random"></i>
+                    </div>
+                    <div class="audio-prev" onclick="prevAudio()">
+                        <i class="fa fa-step-backward" aria-hidden="true"></i>
+                    </div>
+                    <div class="audio-play-pause" onclick="playPauseAudio()">
+                        <i class="fa fa-play" aria-hidden="true"></i>
+                    </div>
+                    <div class="audio-next" onclick="nextAudio()">
+                        <i class="fa fa-step-forward" aria-hidden="true"></i>
+                    </div>
+                    <div class="audio-repeat" onclick="repeatAudio()">
+                        <i class="fa fa-repeat" aria-hidden="true" title="repeat"></i>
+                    </div>
+                </div>
+
+                <div class="wave">
+                    <span class="stroke"></span>
+                    <span class="stroke"></span>
+                    <span class="stroke"></span>
+                    <span class="stroke"></span>
+                    <span class="stroke"></span>
+                    <span class="stroke"></span>
+                    <span class="stroke"></span>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-container">
+                <div class="rs">
+                    <a href="https://rs.school/" target="_blank">
+                        <img src="img/logo-rs.svg" alt="rs logo">
+                    </a>
+                </div>
+                <div class="year">2023</div>
+                <div class="githab">
+                    <a href="https://github.com/Katerina-Kushnir" target="_blank">Katerina-Kushnir</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
